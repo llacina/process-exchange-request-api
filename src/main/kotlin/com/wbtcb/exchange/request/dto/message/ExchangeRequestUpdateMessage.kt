@@ -7,7 +7,7 @@ import java.io.Serializable
 import java.math.BigDecimal
 import java.util.UUID
 
-class ExchangeRequestUpdateMessage(
+data class ExchangeRequestUpdateMessage(
     val externalId: UUID,
     val channelCode: String,
     val stockCode: String,
