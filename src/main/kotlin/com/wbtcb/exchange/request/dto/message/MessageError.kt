@@ -10,7 +10,7 @@ data class MessageError(
     @JsonIgnore
     val errorType: ErrorType,
     @JsonIgnore
-    private val field: KProperty<*>?,
+    val field: KProperty<*>?,
     @JsonIgnore
     val value: Any?,
     val detail: String? = null
