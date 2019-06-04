@@ -1,4 +1,4 @@
-package com.wbtcb.exchange.request.dto.message
+package com.wbtcb.process.exchange.request.dto.message
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.databind.ObjectMapper

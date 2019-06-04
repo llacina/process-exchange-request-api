@@ -1,4 +1,4 @@
-package com.wbtcb.exchange.request.enum
+package com.wbtcb.process.exchange.request.enum
 
 import org.knowm.xchange.dto.Order.OrderType
 
