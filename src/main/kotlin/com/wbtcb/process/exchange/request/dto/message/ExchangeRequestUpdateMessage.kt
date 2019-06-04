@@ -12,7 +12,6 @@ data class ExchangeRequestUpdateMessage(
     val channelCode: String,
     val stockCode: String,
     val amount: BigDecimal,
-    val status: ExchangeRequestStatus,
     val tradeType: TradeType,
     val currencyFrom: String,
     val currencyTo: String,
@@ -27,5 +26,6 @@ data class ExchangeRequestUpdateMessage(
     val maxIdleTime: Int?,
     val metadata: JsonNode?,
     val note: String?,
+    val status: ExchangeRequestStatus,
     var reasons: List<MessageError>?
 ) : Serializable

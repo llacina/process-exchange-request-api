@@ -1,7 +1,6 @@
 package com.wbtcb.process.exchange.request.dto.message
 
 import com.fasterxml.jackson.databind.JsonNode
-import com.wbtcb.process.exchange.request.enum.ExchangeRequestStatus
 import com.wbtcb.process.exchange.request.enum.TradeType
 
 import java.io.Serializable
@@ -14,7 +13,6 @@ data class ExchangeRequestMessage constructor(
     val channelCode: String,
     val stockCode: String,
     val amount: BigDecimal,
-    val status: ExchangeRequestStatus,
     val tradeType: TradeType,
     val currencyFrom: String,
     val currencyTo: String,
