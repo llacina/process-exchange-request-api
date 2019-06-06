@@ -11,7 +11,6 @@ import java.util.UUID
 data class ExchangeRequestPayment constructor(
     val orderRef: UUID,
     val channelCode: String,
-    val paymentAddress: String?,
     val metadata: JsonNode?,
     val note: String?
 ) : Serializable
