@@ -5,7 +5,10 @@ import java.io.Serializable
 
 import java.util.UUID
 
-data class ExchangeRequestToPayMessage constructor(
+/**
+ * Event to start process payment (to_pay)
+ */
+data class ExchangeRequestPayment constructor(
     val orderRef: UUID,
     val channelCode: String,
     val paymentAddress: String?,
