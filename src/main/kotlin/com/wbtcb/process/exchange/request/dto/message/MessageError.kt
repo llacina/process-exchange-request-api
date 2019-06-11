@@ -46,6 +46,7 @@ enum class ErrorType(val code: String, val title: String) {
     FiatToFiat("203", "Invalid combination FiatToFiat"),
     CryptoToCrypto("204", "Invalid combination CryptoToCrypto"),
     ChannelStockCurrencies("205", "Currency is not allowed for this channel and stock"),
+    UniqueConstrain("206", "Duplicate key value - unique constrain"),
 
     // 3xx others errors
     ExchangeError("351", "Exchange error");
