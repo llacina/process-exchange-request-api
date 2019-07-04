@@ -11,8 +11,9 @@ import java.util.UUID
 data class ExchangeRequestMessage constructor(
     val orderRef: UUID,
     val channelCode: String,
-    val stockCode: String,
-    val amount: BigDecimal,
+    val stockCode: String?,
+    val amountCoin: BigDecimal,
+    val amountFiat: BigDecimal,
     val tradeType: TradeType,
     val currencyFrom: String,
     val currencyTo: String,
