@@ -47,6 +47,7 @@ enum class ErrorType(val code: String, val title: String) {
     CryptoToCrypto("204", "Invalid combination CryptoToCrypto"),
     ChannelStockCurrencies("205", "Currency is not allowed for this channel and stock"),
     UniqueConstrain("206", "Duplicate key value - unique constrain"),
+    NotEnoughAccount("207", "Not enough account balance available"),
 
     // 3xx others errors
     ExchangeError("351", "Exchange error");
