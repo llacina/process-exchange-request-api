@@ -12,6 +12,7 @@ data class ExchangeRequestMessage constructor(
     val orderRef: UUID,
     val channelCode: String,
     val stockCode: String?,
+    val stockCurrency: String?,
     val amountCoin: BigDecimal,
     val amountFiat: BigDecimal,
     val tradeType: TradeType,
@@ -28,4 +29,13 @@ data class ExchangeRequestMessage constructor(
     val maxIdleTime: Int?,
     val metadata: JsonNode?,
     val note: String?
-) : Serializable
+) : Serializable {
+
+    fun getFiatCurrency(): String {
+        return if (tradeType == TradeType.BUY) currencyFrom else currencyTo
+    }
+
+    fun getCoinCurrency(): String {
+        return if (tradeType == TradeType.BUY) currencyTo else currencyFrom
+    }
+}
