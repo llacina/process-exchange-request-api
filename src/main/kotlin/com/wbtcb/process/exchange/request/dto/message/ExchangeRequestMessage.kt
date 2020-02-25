@@ -29,4 +29,13 @@ data class ExchangeRequestMessage constructor(
     val maxIdleTime: Int?,
     val metadata: JsonNode?,
     val note: String?
-) : Serializable
+) : Serializable {
+
+    fun getCurrencyFrom(): String {
+        return if (tradeType == TradeType.BUY) currencyFiat else currencyCoin
+    }
+
+    fun getCurrencyTo(): String {
+        return if (tradeType == TradeType.SELL) currencyFiat else currencyCoin
+    }
+}
