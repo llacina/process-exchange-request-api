@@ -14,8 +14,8 @@ data class ExchangeRequestUpdateMessage(
     val amountCoin: BigDecimal,
     val amountFiat: BigDecimal,
     val tradeType: TradeType,
-    val currencyFrom: String,
-    val currencyTo: String,
+    val currencyCoin: String,
+    val currencyFiat: String,
     /**
      * Address for claiming process
      */

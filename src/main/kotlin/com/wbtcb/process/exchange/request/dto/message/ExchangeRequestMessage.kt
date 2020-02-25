@@ -16,8 +16,8 @@ data class ExchangeRequestMessage constructor(
     val amountCoin: BigDecimal,
     val amountFiat: BigDecimal,
     val tradeType: TradeType,
-    val currencyFrom: String,
-    val currencyTo: String,
+    val currencyCoin: String,
+    val currencyFiat: String,
     /**
      * Address for claiming process
      */
@@ -31,11 +31,4 @@ data class ExchangeRequestMessage constructor(
     val note: String?
 ) : Serializable {
 
-    fun getFiatCurrency(): String {
-        return if (tradeType == TradeType.BUY) currencyFrom else currencyTo
-    }
-
-    fun getCoinCurrency(): String {
-        return if (tradeType == TradeType.BUY) currencyTo else currencyFrom
-    }
 }
