@@ -29,6 +29,4 @@ data class ExchangeRequestMessage constructor(
     val maxIdleTime: Int?,
     val metadata: JsonNode?,
     val note: String?
-) : Serializable {
-
-}
+) : Serializable
